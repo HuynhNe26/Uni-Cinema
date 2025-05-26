@@ -3,38 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/menu_order">
-
+    app:startDestination="@+id/menu_home">
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.example.unicinema.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/menu_order"
         android:name="com.example.unicinema.ui.order.OrderFragment"
         android:label="@string/menu_order"
         tools:layout="@layout/fragment_order" />
-
     <fragment
         android:id="@+id/menu_movie"
         android:name="com.example.unicinema.ui.movie.MovieFragment"
         android:label="@string/menu_movie"
         tools:layout="@layout/fragment_movie" />
-
     <fragment
         android:id="@+id/menu_theater"
         android:name="com.example.unicinema.ui.theater.TheaterFragment"
         android:label="@string/menu_theater"
         tools:layout="@layout/fragment_theater" />
-
     <fragment
         android:id="@+id/menu_discount"
         android:name="com.example.unicinema.ui.discount.DiscountFragment"
         android:label="@string/menu_discount"
         tools:layout="@layout/fragment_discount" />
-
     <fragment
         android:id="@+id/menu_gift"
         android:name="com.example.unicinema.ui.gift.GiftFragment"
         android:label="@string/menu_gift"
         tools:layout="@layout/fragment_gift" />
-
     <fragment
         android:id="@+id/menu_contact"
         android:name="com.example.unicinema.ui.contact.ContactFragment"

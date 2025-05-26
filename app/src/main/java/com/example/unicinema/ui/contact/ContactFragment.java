@@ -13,26 +13,27 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.unicinema.R;
+import com.example.unicinema.databinding.FragmentContactBinding;
+import com.example.unicinema.databinding.FragmentGiftBinding;
+import com.example.unicinema.ui.gift.GiftViewModel;
 
 public class ContactFragment extends Fragment {
 
-    private ContactViewModel mViewModel;
+    private FragmentContactBinding binding;
 
-    public static ContactFragment newInstance() {
-        return new ContactFragment();
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        ContactViewModel contactViewModel =
+                new ViewModelProvider(this).get(ContactViewModel.class);
+
+        binding = FragmentContactBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        return root;
+    };
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ContactViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }

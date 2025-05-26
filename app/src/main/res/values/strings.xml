@@ -7,12 +7,11 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_account">Tài khoản</string>
 
-    <string name="menu_order">Mua vé</string>
+    <string name="menu_home">Trang chủ</string>
+    <string name="menu_order">Vé</string>
     <string name="menu_movie">Phim</string>
     <string name="menu_theater">Rạp</string>
     <string name="menu_discount">Khuyến mãi</string>
     <string name="menu_gift">Quà tặng</string>
     <string name="menu_contact">Liên hệ</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

@@ -13,26 +13,27 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.unicinema.R;
+import com.example.unicinema.databinding.FragmentGiftBinding;
+import com.example.unicinema.databinding.FragmentMovieBinding;
+import com.example.unicinema.ui.movie.MovieViewModel;
 
 public class GiftFragment extends Fragment {
 
-    private GiftViewModel mViewModel;
+    private FragmentGiftBinding binding;
 
-    public static GiftFragment newInstance() {
-        return new GiftFragment();
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        GiftViewModel giftViewModel =
+                new ViewModelProvider(this).get(GiftViewModel.class);
+
+        binding = FragmentGiftBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        return root;
+    };
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_gift, container, false);
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(GiftViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }

@@ -1,15 +1,15 @@
-package com.example.unicinema.ui.theater;
+package com.example.unicinema.ui.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class TheaterViewModel extends ViewModel {
+public class HomeViewModel extends ViewModel {
     private final MutableLiveData<String> mText;
 
-    public TheaterViewModel() {
+    public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is theater fragment");
+        mText.setValue("This is home fragment");
     }
 
     public LiveData<String> getText() {

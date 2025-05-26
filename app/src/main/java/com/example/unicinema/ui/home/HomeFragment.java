@@ -1,4 +1,4 @@
-package com.example.unicinema.ui.theater;
+package com.example.unicinema.ui.home;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -11,20 +11,22 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.unicinema.R;
-import com.example.unicinema.databinding.FragmentTheaterBinding;
+import com.example.unicinema.databinding.FragmentGiftBinding;
+import com.example.unicinema.databinding.FragmentHomeBinding;
+import com.example.unicinema.ui.gift.GiftViewModel;
 
-public class TheaterFragment extends Fragment {
-    private FragmentTheaterBinding binding;
+public class HomeFragment extends Fragment {
+
+    private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        TheaterViewModel theaterViewModel =
-                new ViewModelProvider(this).get(TheaterViewModel.class);
+        HomeViewModel homeViewModel =
+                new ViewModelProvider(this).get(HomeViewModel.class);
 
-        binding = FragmentTheaterBinding.inflate(inflater, container, false);
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         return root;
     };

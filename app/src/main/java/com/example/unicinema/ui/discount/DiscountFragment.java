@@ -13,26 +13,27 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.unicinema.R;
+import com.example.unicinema.databinding.FragmentDiscountBinding;
+import com.example.unicinema.databinding.FragmentGiftBinding;
+import com.example.unicinema.ui.gift.GiftViewModel;
 
 public class DiscountFragment extends Fragment {
 
-    private DiscountViewModel mViewModel;
+    private FragmentDiscountBinding binding;
 
-    public static DiscountFragment newInstance() {
-        return new DiscountFragment();
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        DiscountViewModel discountViewModel =
+                new ViewModelProvider(this).get(DiscountViewModel.class);
+
+        binding = FragmentDiscountBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        return root;
+    };
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_discount, container, false);
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(DiscountViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }

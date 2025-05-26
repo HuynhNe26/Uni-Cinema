@@ -13,26 +13,27 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.unicinema.R;
+import com.example.unicinema.databinding.FragmentOrderBinding;
+import com.example.unicinema.databinding.FragmentTheaterBinding;
+import com.example.unicinema.ui.theater.TheaterViewModel;
 
 public class OrderFragment extends Fragment {
 
-    private OrderViewModel mViewModel;
+    private FragmentOrderBinding binding;
 
-    public static OrderFragment newInstance() {
-        return new OrderFragment();
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        OrderViewModel orderViewModel =
+                new ViewModelProvider(this).get(OrderViewModel.class);
+
+        binding = FragmentOrderBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+        return root;
+    };
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_order, container, false);
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(OrderViewModel.class);
-        // TODO: Use the ViewModel
-    }
-
 }
