@@ -6,7 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="primary_color">#3F51B5</color> <!-- Màu chính, ví dụ xanh đậm -->
-    <color name="primary_variant_color">#303F9F</color> <!-- Màu biến thể -->
+    <color name="primary_color"></color> <!-- Màu chính, ví dụ xanh đậm -->
+    <color name="primary_variant_color"></color> <!-- Màu biến thể -->
     <color name="white">#FFFFFF</color>
 </resources>
