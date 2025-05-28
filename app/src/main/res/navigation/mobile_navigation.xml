@@ -38,5 +38,9 @@
         android:name="com.example.unicinema.ui.contact.ContactFragment"
         android:label="@string/menu_contact"
         tools:layout="@layout/fragment_contact" />
-
+    <activity
+        android:id="@+id/action_account"
+        android:name="com.example.unicinema.view.login.LoginActivity"
+        android:label="Tài khoản"
+        tools:layout="@layout/activity_login" />
 </navigation>
