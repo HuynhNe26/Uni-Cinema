@@ -2,6 +2,7 @@ package com.example.unicinema;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -31,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.menu_order, R.id.menu_movie, R.id.menu_theater, R.id.menu_discount, R.id.menu_gift, R.id.menu_contact, R.id.menu_home)
                 .setOpenableLayout(drawer)
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }

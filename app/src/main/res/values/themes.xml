@@ -14,15 +14,10 @@
     <style name="Theme.UniCinema.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <!-- Theme cho AppBar -->
-    <style name="Theme.UniCinema.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorOnPrimary">@color/white</item>
-    </style>
+    <style name="Theme.UniCinema.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <!-- Theme cho Popup Menu -->
     <style name="Theme.UniCinema.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

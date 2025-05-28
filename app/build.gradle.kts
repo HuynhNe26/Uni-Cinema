@@ -33,6 +33,8 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    buildToolsVersion = "36.0.0"
+    ndkVersion = "29.0.13113456 rc1"
 }
 
 dependencies {
@@ -44,7 +46,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
-    implementation(libs.legacy.support.v4)
+    implementation(libs.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
